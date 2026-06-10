@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="bpaas-design-system" content="organic-stripe">
+    <meta name="bpaas-design-theme" content="kr-organic-stripe">
+    <title>화곡 셔츠룸 | 마포 주식투자 모임 - 정보</title>
+    <meta name="description" content="화곡 셔츠룸에서 만나는 마포 주식투자 모임, 실전 감각과 형들의 노하우를 공유하는 소규모 스터디. 투자 정보와 자유로운 이야기로 채워지는 공간.">
+    <meta name="keywords" content="화곡 셔츠룸, 마포 주식투자, 주식 스터디, 셔츠룸 모임, 투자 커뮤니티, 마포구 주식, 주식 모임, 화곡동 셔츠룸, 투자 정보">
+    <link rel="canonical" href="https://sf-t3-1779642675702-368.vercel.app/info">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="화곡 셔츠룸 | 마포 주식투자 모임 - 정보">
+    <meta property="og:description" content="화곡 셔츠룸에서 만나는 마포 주식투자 모임. 형들이 모여 주식 이야기하고, 실전 감각 키우는 곳. 자세한 정보를 확인해보세요.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #faf9f7;
+            color: #2c2c2c;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        nav {
+            background: #ffffff;
+            border-bottom: 1px solid #e8e5e0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 64px;
+        }
+        .nav-logo {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #3b3a36;
+            letter-spacing: -0.5px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #5c5a55;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover {
+            color: #1a1a18;
+        }
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #3b3a36;
+            padding: 8px;
+        }
+        .hamburger:hover {
+            color: #1a1a18;
+        }
+        .hero {
+            padding: 80px 0 60px;
+            text-align: center;
+        }
+        .hero-content {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+        .hero-text h1 {
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: #2c2c2c;
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+        }
+        .hero-text p {
+            font-size: 1.1rem;
+            color: #5c5a55;
+            margin-bottom: 8px;
+        }
+        .section {
+            padding: 60px 0;
+        }
+        .section-title {
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 32px;
+            color: #2c2c2c;
+        }
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+        .card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 28px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+            border: 1px solid #efedea;
+            transition: box-shadow 0.2s;
+        }
+        .card:hover {
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        .card h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #2c2c2c;
+        }
+        .card p {
+            color: #5c5a55;
+            font-size: 0.95rem;
+            margin-bottom: 8px;
+        }
+        .faq-item {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 24px 28px;
+            margin-bottom: 16px;
+            border: 1px solid #efedea;
+        }
+        .faq-item h3 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #2c2c2c;
+        }
+        .faq-item p {
+            color: #5c5a55;
+            font-size: 0.95rem;
+        }
+        .cta-box {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 40px;
+            text-align: center;
+            border: 1px solid #efedea;
+            margin-top: 40px;
+        }
+        .cta-box h2 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #2c2c2c;
+        }
+        .cta-box p {
+            color: #5c5a55;
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: inline-block;
+            background: #2c2c2c;
+            color: #ffffff;
+            padding: 12px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: background 0.2s;
+        }
+        .btn:hover {
+            background: #1a1a18;
+        }
+        .footer {
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid #efedea;
+            color: #8a8883;
+            font-size: 0.85rem;
+        }
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 64px;
+                left: 0;
+                right: 0;
+                background: #ffffff;
+                padding: 20px;
+                border-bottom: 1px solid #e8e5e0;
+                gap: 16px;
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .hero-text h1 {
+                font-size: 1.8rem;
+            }
+            .section {
+                padding: 40px 0;
+            }
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="nav-inner">
+                <div class="nav-logo">화곡 셔츠룸</div>
+                <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('active')">☰</button>
+                <div class="nav-links">
+                    <a href="/">홈</a>
+                    <a href="/info">정보</a>
+                    <a href="/community">커뮤니티</a>
+                    <a href="tel:010-1234-5678">전화 문의</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>화곡 셔츠룸, 투자 정보의 모든 것</h1>
+                    <p>마포에서 주식 이야기 나누고, 형들끼리 실전 감각 키우는 곳. 자세한 내용을 알려줄게.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">모임은 어떻게 진행되나?</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>📅 매주 수요일 저녁</h3>
+                    <p>오후 7시부터 9시까지, 화곡 셔츠룸에서 만나. 부담 없이 와서 커피 한잔 하면서 시작해.</p>
+                </div>
+                <div class="card">
+                    <h3>👥 소규모 스터디</h3>
+                    <p>최대 8명 정도라서 형들끼리 편하게 이야기 나누기 좋아. 주식 초보도 환영이야, 걱정 마.</p>
+                </div>
+                <div class="card">
+                    <h3>📊 실전 감각 키우기</h3>
+                    <p>차트 분석, 뉴스 해석, 매매 전략까지. 형들이 실제로 쓰는 노하우를 공유해.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">왜 화곡 셔츠룸인가?</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>📍 마포 지역 특화</h3>
+                    <p>마포구에서만 만나는 형들끼리의 모임이라 동네 분위기도 알고, 투자 이야기도 더 현실적이야.</p>
+                </div>
+                <div class="card">
+                    <h3>💬 자유로운 분위기</h3>
+                    <p>형, 나 이렇게 부르면서 편하게 떠들어. 주식 말고도 쓸데없는 잡담도 환영이야.</p>
+                </div>
+                <div class="card">
+                    <h3>🔍 정보 공유</h3>
+                    <p>매주 주식 뉴스, 종목 분석, 시장 트렌드를 형들끼리 공유해. 각자 다른 시각에서 배울 수 있어.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">자주 묻는 질문</h2>
+            <div class="faq-item">
+                <h3>주식 초보인데 괜찮을까?</h3>
+                <p>당연하지! 형들 중에도 처음에는 다 초보였어. 차근차근 알려주니까 부담 갖지 마. 오히려 새로운 시각이 좋다고 하더라.</p>
+            </div>
+            <div class="faq-item">
+                <h3>참가비가 있나요?</h3>
+                <p>딱히 없어. 그냥 와서 커피나 한잔 사면서 이야기하면 돼. 가끔 형들이 간식 사오기도 하는데 그건 자율이야.</p>
+            </div>
+            <div class="faq-item">
+                <h3>어떻게 신청하나요?</h3>
+                <p>전화나 문자로 연락 주면 돼. 번호는 위에 있어. 간단하게 이름이랑 몇 명 올지 알려주면 끝이야.</p>
+            </div>
+            <div class="faq-item">
+                <h3>주식 말고 다른 이야기도 하나요?</h3>
+                <p>그럼! 주식이 주제긴 한데, 형들끼리 모이면 경제, 부동산, 일상 이야기까지 다 나와. 편하게 놀다 가면 돼.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="cta-box">
+                <h2>궁금한 게 있다면?</h2>
+                <p>형들이 기다리고 있어. 전화 한 통이면 바로 연결돼. 부담 없이 물어봐.</p>
+                <a href="tel:010-1234-5678" class="btn">전화 문의하기</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>화곡 셔츠룸 | 마포 주식투자 모임 | 문의: 010-1234-5678</p>
+            <p style="margin-top: 8px;">© 2025 화곡 셔츠룸. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
